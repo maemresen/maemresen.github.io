@@ -7,30 +7,24 @@ import "./App.css";
 
 const Home = () => <div>home</div>;
 
-const Cv = () => <div>cv</div>;
-
 const App = () => {
   return (
     <Router>
-      <div className="App">
-        <Navbar bg="dark" variant="dark" expand="lg">
+      <div id="App" className="bg-light">
+        <header>
+          <Navbar bg="dark" variant="dark" expand="lg">
+            <Navbar.Brand className="mx-auto">
+              Mehmet Arif Emre Şen
+            </Navbar.Brand>
+          </Navbar>
+        </header>
+        <main className="mt-4">
           <Container>
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <Link to="/" className="nav-link">Home</Link>
-                <Link to="/cv" className="nav-link">CV</Link>
-              </Nav>
-            </Navbar.Collapse>
+            <Switch>
+              <Route exact path="/" component={Home}></Route>
+            </Switch>
           </Container>
-        </Navbar>
-        <Container>
-          <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route exact path="/cv" component={Cv}></Route>
-          </Switch>
-        </Container>
+        </main>
       </div>
     </Router>
   );
