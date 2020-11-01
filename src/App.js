@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Container, Navbar, Nav } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
