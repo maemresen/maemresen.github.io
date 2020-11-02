@@ -10,7 +10,7 @@ const Home = () => <div>home</div>;
 const App = () => {
   return (
     <Router>
-      <div id="App" className="bg-light">
+      <div id="App">
         <header>
           <Navbar bg="dark" variant="dark" expand="lg">
             <Navbar.Brand className="mx-auto">
