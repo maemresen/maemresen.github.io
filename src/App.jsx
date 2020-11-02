@@ -1,10 +1,10 @@
 
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, NavLink, Route, Switch } from "react-router-dom";
 
-import { Container, Navbar, Nav, Row, Col } from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "./styles/App.css";
+import "./styles/App.scss";
 
 import Home from "./pages/Home";
 import Cv from "./pages/Cv";
@@ -15,24 +15,22 @@ const App = () => {
     <Router>
       <header>
         <Navbar bg="dark" variant="dark" expand="lg" className="text-center">
-          <Col md="12">
-            <Row>
-              <Col md="12">
-                <Navbar.Brand>
-                  Mehmet Arif Emre Şen
-              </Navbar.Brand>
-              </Col>
-              <Col md="12">
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="mx-auto">
-                    <Link to="/" className="nav-link">Home</Link>
-                    <Link to="/cv" className="nav-link">CV</Link>
-                  </Nav>
-                </Navbar.Collapse>
-              </Col>
-            </Row>
-          </Col>
+          <Container>
+            <Navbar.Brand>
+              Mehmet Arif Emre Şen
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ml-auto">
+                <NavLink exact={true} to="/" activeClassName="active" className="nav-link">
+                  Home
+                </NavLink>
+                <NavLink to="/cv" activeClassName="active" className="nav-link">
+                  CV
+                </NavLink>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
         </Navbar>
 
       </header>
