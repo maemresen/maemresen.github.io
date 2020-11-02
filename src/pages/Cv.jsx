@@ -18,7 +18,7 @@ const Cv = () => {
             <iframe
                 src="https://maemresen.github.io/resume/cv_mehmet_arif_emre_sen.pdf"
                 title="title"
-                frameborder={(loaded) ? "1" : "0"}
+                frameBorder={(loaded) ? "1" : "0"}
                 onLoad={() => load(true)}
                 style={{
                     width: "100%",
