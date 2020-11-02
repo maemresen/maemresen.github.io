@@ -2,13 +2,12 @@
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
 import { Container, Navbar, Nav, Row, Col } from "react-bootstrap";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "./App.css";
+import "./styles/App.css";
 
-import Home from  "./pages/Home";
-import Cv from  "./pages/Cv";
+import Home from "./pages/Home";
+import Cv from "./pages/Cv";
 
 
 const App = () => {
