@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom'
 
 import Terminal from 'react-console-emulator'
 
-
 const NavTerminal = (props) => {
     const terminal = React.createRef()
     const history = useHistory()
