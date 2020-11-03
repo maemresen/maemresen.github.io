@@ -1,12 +1,18 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
+import { useSelector } from 'react-redux';
+
 import Terminal from 'react-console-emulator'
 
+import { getVisibility } from './navTerminalSlice'
+
 const NavTerminal = (props) => {
+    const visibility = useSelector(getVisibility)
+
     const terminal = React.createRef()
     const history = useHistory()
-    
+
     const commands = {
         cd: {
             description: 'Navigating between pages.',
@@ -31,7 +37,8 @@ const NavTerminal = (props) => {
 
     return (
         <div className={props.className} style={{
-            height: "300px"
+            height: "300px",
+            display: (visibility ? "block" : "none")
         }}>
             <Terminal
                 ref={terminal}
