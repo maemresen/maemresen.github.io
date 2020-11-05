@@ -10,7 +10,7 @@ import NavTerminal from "./components/navTerminal/NavTerminal";
 import TopMenu from './components/topMenu/TopMenu';
 
 import Home from "./pages/Home";
-import Cv from "./pages/Cv";
+import NotFound from "./pages/NotFound";
 
 import './App.css';
 
@@ -25,7 +25,7 @@ function App() {
           <NavTerminal className="mb-3" />
           <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route exact path="/cv" component={Cv}></Route>
+            <Route component={NotFound} />
           </Switch>
         </Container>
       </main>
