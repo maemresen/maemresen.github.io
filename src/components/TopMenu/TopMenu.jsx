@@ -2,11 +2,11 @@
 import { Container, Navbar } from "react-bootstrap";
 
 
-const TopMenu = (props) => {
+const TopMenu = () => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container className="d-flex justify-content-center">
-                <Navbar.Brand className="text-info">Mehmet Arif Emre Şen</Navbar.Brand>
+                <Navbar.Brand className="text-light">Mehmet Arif Emre Şen</Navbar.Brand>
             </Container>
         </Navbar>
     )

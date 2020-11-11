@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Button, Col, Row, Card } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
@@ -11,11 +11,11 @@ import { wallpaper } from './assets';
 function App() {
   return (
     <div id="app" className="vh-100" style={{
-      background: `url(${wallpaper})`,
-      overflow: "auto"
+      background: `url(${wallpaper})`
     }}>
       <div id="overlay" className="vh-100" style={{
-        backgroundColor: "rgba(30, 30, 30, 0.6)"
+        backgroundColor: "rgba(30, 30, 30, 0.7)",
+        overflow: "auto"
       }}>
         <header>
           <TopMenu />

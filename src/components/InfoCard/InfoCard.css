@@ -1,6 +1,6 @@
 .info-card {
   text-align: center;
-  background-color: rgba(248, 249, 250, 0.85) !important;
+  transition: background-color 0.5s ease;
 }
 
 .info-card .card-header, .info-card .card-footer {
