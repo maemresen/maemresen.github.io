@@ -3,43 +3,48 @@ import React from 'react';
 import { Container, Button, Col, Row, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { TopMenu } from './components'
-
 import './App.css';
+
+import { TopMenu, InfoCard } from './components'
 import { wallpaper } from './assets';
 
 function App() {
   return (
     <div id="app" className="vh-100" style={{
       background: `url(${wallpaper})`,
+      overflow: "auto"
     }}>
-      <header>
-        <TopMenu />
-      </header>
-      <main>
-        <Col md="12">
-          <Row>
-            <Col md="6">
-              <div className="py-2">
-                <Card className="bg-dark">
-                  <Card.Header className="text-white" as="h5">Featured</Card.Header>
-                  <Card.Body className="bg-light">
-                    <Card.Title>Special title treatment</Card.Title>
-                    <Card.Text>
-                      With supporting text below as a natural lead-in to additional content.
-                  </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-                </Card>
-              </div>
-            </Col>
-            <Col md="6">
-            </Col>
-          </Row>
-        </Col>
-        <Container fluid>
-        </Container>.
+      <div id="overlay" className="vh-100" style={{
+        backgroundColor: "rgba(30, 30, 30, 0.6)"
+      }}>
+        <header>
+          <TopMenu />
+        </header>
+        <main className="py-4">
+          <Container fluid>
+            <Row>
+              <Col md="12">
+                <InfoCard
+                  header="About Me"
+                  footer="About Me"
+                >
+                  I am an entrepreneur who wants to learn new technologies and use them to make things easier.
+                  <br />
+                  My life goal is having my own job and creating a software community that everyone can get benefit from.
+                  <br />
+                  I have deep interest to Object Oriented Paradigm
+                </InfoCard>
+              </Col>
+              <Col md="6">
+                <InfoCard />
+              </Col>
+              <Col md="6">
+                <InfoCard />
+              </Col>
+            </Row>
+          </Container>
         </main>
+      </div>
     </div>
 
   );
