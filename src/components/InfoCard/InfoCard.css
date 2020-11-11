@@ -1,6 +1,6 @@
 .info-card {
   text-align: center;
-  background-color: rgba(248, 249, 250, 0.8) !important;
+  background-color: rgba(248, 249, 250, 0.85) !important;
 }
 
 .info-card .card-header, .info-card .card-footer {

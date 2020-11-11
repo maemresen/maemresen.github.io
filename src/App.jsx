@@ -21,25 +21,27 @@ function App() {
           <TopMenu />
         </header>
         <main className="py-4">
-          <Container fluid>
+          <Container>
             <Row>
               <Col md="12">
                 <InfoCard
                   header="About Me"
-                  footer="About Me"
                 >
                   I am an entrepreneur who wants to learn new technologies and use them to make things easier.
                   <br />
                   My life goal is having my own job and creating a software community that everyone can get benefit from.
                   <br />
                   I have deep interest to Object Oriented Paradigm
+                  <hr />
+                  <a
+                    className='d-block text-center'
+                    href='https://maemresen.github.io/curriculum-vitae/cv_mehmet_arif_emre_sen.pdf'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <b>CV Link</b>
+                  </a>
                 </InfoCard>
-              </Col>
-              <Col md="6">
-                <InfoCard />
-              </Col>
-              <Col md="6">
-                <InfoCard />
               </Col>
             </Row>
           </Container>
