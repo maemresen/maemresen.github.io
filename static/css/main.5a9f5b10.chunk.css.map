@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/InfoCard/InfoCard.css"],"names":[],"mappings":"AAAA,WACE,iBAAkB,CAClB,oCACF,CAEA,gDACE,aACF","file":"main.5a9f5b10.chunk.css","sourcesContent":[".info-card {\r\n  text-align: center;\r\n  transition: background-color 0.5s ease;\r\n}\r\n\r\n.info-card .card-header, .info-card .card-footer {\r\n  color: darkgray;\r\n}"]}
