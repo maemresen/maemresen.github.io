@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Container, Col, Row, Image } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
 
 import { InfoCard } from './components'
-import { wallpaper, emrePortrait } from './assets';
+import { wallpaper } from './assets';
 
 function App() {
   return (
