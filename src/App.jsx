@@ -18,25 +18,27 @@ function App() {
         overflow: "auto"
       }}>
         <Container fluid className="vh-100">
-          <Row className="h-100">
-            <Col lg="4" className="align-self-center">
+          <Row className="h-100 justify-content-center">
+            <Col lg="6" className="align-self-center">
               <InfoCard
                 header="Mehmet Arif Emre Şen"
               >
-                <Image
+                {/* <Image
                   rounded
                   fluid
                   src={emrePortrait}
                   className="border border-dark"
                   style={{
                     maxWidth: "200px"
-                  }} />
-                <div className="border-top border-dark mt-4 pt-4">
-                  <h5>About Me</h5>
-                  <br />
-                  I am an entrepreneur, I have deep interest to Object Oriented Paradigm.
-                  <br />
-                  <b>And, I am a Linux User.</b>
+                  }} /> */}
+                <div
+                  style={{
+                    textAlign: "justify"
+                  }}>
+                  I am an entrepreneur who wants to learn new technologies and use them to make things easier.
+                  My life goal is having my own job and creating a software community that everyone can get benefit from.
+                  I have deep interest to Object Oriented Paradigm
+                  And, I am a Linux User.
                 </div>
 
                 <div className="border-top border-dark mt-4 pt-4">
@@ -48,7 +50,7 @@ function App() {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <b>Personal CV Link</b>
+                    <b>Personal CV</b>
                   </a>
                   <hr />
                   <a
@@ -80,16 +82,6 @@ function App() {
                 </div>
               </InfoCard>
             </Col>
-            
-            <Col lg="4" className="align-self-center">
-              <InfoCard
-                header="Portfolio"
-              >
-                (will be updated)
-              </InfoCard>
-            </Col>
-            
-
           </Row>
         </Container>
 
