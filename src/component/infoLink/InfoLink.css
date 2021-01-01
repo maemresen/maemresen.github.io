@@ -8,9 +8,9 @@
 
 .icon-link a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .icon-link a:hover {
   color: green;
-  text-decoration: none;
+  text-decoration: underline;
 }

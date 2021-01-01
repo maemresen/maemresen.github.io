@@ -8,8 +8,14 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faEnvelope, fas } from "@fortawesome/free-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelope,
+  faFile,
+  faGlassCheers,
+  fas,
+  faThumbsUp,
+} from "@fortawesome/free-solid-svg-icons";
+import { fab, faLinux } from "@fortawesome/free-brands-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 
 import { wallpaper } from "./assets";
@@ -79,23 +85,34 @@ const App = () => {
                   </div>
                 </div>
                 <div className="border-top border-success mt-4 pt-2">
-                  <Image
-                    roundedCircle
-                    fluid
-                    src="https://avatars2.githubusercontent.com/u/17517090?s=460&u=a0e442b6913f827d2e51e00abe143b2dbc375f33&v=4"
-                    className="border border-dark mt-4"
-                    style={{
-                      maxWidth: "200px",
-                    }}
-                  />
-                  <h3 className="mt-4">About Me</h3>
-                  <h5 className="mt-2 text-secondary text-center">
-                    I am an entrepreneur who wants to learn new technologies and
-                    use them to make things easier. My life goal is having my
-                    own job and creating a software community that everyone can
-                    get benefit from. I have deep interest to Object Oriented
-                    Paradigm And, I am a Linux User.
-                  </h5>
+                  <Row>
+                    <Col md="4">
+                      <Image
+                        roundedCircle
+                        fluid
+                        src="https://avatars2.githubusercontent.com/u/17517090?s=460&u=a0e442b6913f827d2e51e00abe143b2dbc375f33&v=4"
+                        className="border border-dark mt-4"
+                        style={{
+                          maxWidth: "200px",
+                        }}
+                      />
+                    </Col>
+                    <Col md="8">
+                      <h3 className="mt-4">About Me</h3>
+                      <h5
+                        className="mt-2 text-secondary"
+                        style={{
+                          textAlign: "justify",
+                        }}
+                      >
+                        I am an entrepreneur who wants to learn new technologies
+                        and use them to make things easier. My life goal is
+                        having my own job and creating a software community that
+                        everyone can get benefit from. I have deep interest to
+                        Object Oriented Paradigm And.
+                      </h5>
+                    </Col>
+                  </Row>
                 </div>
                 <div className="text-secondary border-top border-success mt-4 pt-4 icon-link">
                   <a
@@ -103,7 +120,47 @@ const App = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <h5>Check My CV Here...</h5>
+                    <h5>
+                      <FontAwesomeIcon icon={faFile} className="mx-3" />
+                      Check My CV Here...{" "}
+                      <FontAwesomeIcon icon={faFile} className="mx-3" />
+                    </h5>
+                  </a>
+                </div>
+                <div className="border-top border-success mt-4 pt-2">
+                  <h5 className="mt-2 text-secondary text-center">
+                    Also, I am a Linux User. <br />
+                    <FontAwesomeIcon
+                      icon={faLinux}
+                      className="mt-3"
+                      size="3x"
+                    />
+                  </h5>
+                  <div className="text-secondary mt-2 icon-link">
+                    <a
+                      href="https://manjaro.org/downloads/official/xfce/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <h5>
+                        <FontAwesomeIcon icon={faThumbsUp} className="mx-3" />
+                        Preffered Linux Distro : Manjaro XFCE{" "}
+                        <FontAwesomeIcon icon={faThumbsUp} className="mx-3" />
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+                <div className="text-secondary border-top border-success mt-4 pt-4 icon-link">
+                  <a
+                    href="https://www.yazilim.vip"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <h5>
+                      <FontAwesomeIcon icon={faGlassCheers} className="mx-3" />
+                      Feel free to visit our community (a.k.a YazilimVIP)...
+                      <FontAwesomeIcon icon={faGlassCheers} className="mx-3" />
+                    </h5>
                   </a>
                 </div>
               </Jumbotron>
