@@ -84,23 +84,22 @@ const App = () => {
                     </div>
                   </div>
                 </div>
-                <div className="border-top border-success mt-4 pt-2">
+                <div className="border-top border-success mt-4 pt-4">
                   <Row>
-                    <Col md="4">
+                    <Col md="4" className="align-self-center text-center">
                       <Image
                         roundedCircle
                         fluid
                         src="https://avatars2.githubusercontent.com/u/17517090?s=460&u=a0e442b6913f827d2e51e00abe143b2dbc375f33&v=4"
-                        className="border border-dark mt-4"
+                        className="border border-dark"
                         style={{
-                          maxWidth: "200px",
+                          maxWidth: "170px",
                         }}
                       />
                     </Col>
-                    <Col md="8">
-                      <h3 className="mt-4">About Me</h3>
+                    <Col md="8" className="align-self-center text-center">
                       <h5
-                        className="mt-2 text-secondary"
+                        className="text-secondary"
                         style={{
                           textAlign: "justify",
                         }}
@@ -115,17 +114,43 @@ const App = () => {
                   </Row>
                 </div>
                 <div className="text-secondary border-top border-success mt-4 pt-4 icon-link">
-                  <a
-                    href="https://maemresen.github.io/curriculum-vitae/cv_mehmet_arif_emre_sen.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <h5>
+                  <h5>
+                    <a
+                      href="https://maemresen.github.io/curriculum-vitae/cv_mehmet_arif_emre_sen.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <FontAwesomeIcon icon={faFile} className="mx-3" />
                       Check My CV Here...{" "}
                       <FontAwesomeIcon icon={faFile} className="mx-3" />
+                    </a>
+                  </h5>
+                </div>
+                <div className="text-secondary border-top border-success mt-4 pt-4">
+                  <h5>
+                    We have a software community named as YazilimVIP.
+                    <br />
+                    Feel free to visit our website by the following link
+                  </h5>
+                  <div className="icon-link">
+                    <h5>
+                      <a
+                        href="https://www.yazilim.vip"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FontAwesomeIcon
+                          icon={faGlassCheers}
+                          className="mx-3"
+                        />
+                        Yazilim VIP
+                        <FontAwesomeIcon
+                          icon={faGlassCheers}
+                          className="mx-3"
+                        />
+                      </a>
                     </h5>
-                  </a>
+                  </div>
                 </div>
                 <div className="border-top border-success mt-4 pt-2">
                   <h5 className="mt-2 text-secondary text-center">
@@ -137,31 +162,18 @@ const App = () => {
                     />
                   </h5>
                   <div className="text-secondary mt-2 icon-link">
-                    <a
-                      href="https://manjaro.org/downloads/official/xfce/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <h5>
+                    <h5>
+                      <a
+                        href="https://manjaro.org/downloads/official/xfce/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <FontAwesomeIcon icon={faThumbsUp} className="mx-3" />
                         Preffered Linux Distro : Manjaro XFCE{" "}
                         <FontAwesomeIcon icon={faThumbsUp} className="mx-3" />
-                      </h5>
-                    </a>
-                  </div>
-                </div>
-                <div className="text-secondary border-top border-success mt-4 pt-4 icon-link">
-                  <a
-                    href="https://www.yazilim.vip"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <h5>
-                      <FontAwesomeIcon icon={faGlassCheers} className="mx-3" />
-                      Feel free to visit our community (a.k.a YazilimVIP)...
-                      <FontAwesomeIcon icon={faGlassCheers} className="mx-3" />
+                      </a>
                     </h5>
-                  </a>
+                  </div>
                 </div>
               </Jumbotron>
             </Col>
