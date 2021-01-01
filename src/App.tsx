@@ -8,18 +8,12 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faEnvelope, faInbox, fas } from "@fortawesome/free-solid-svg-icons";
-import {
-  fab,
-  faGithub,
-  faGitlab,
-  faLinkedin,
-  faMedium,
-} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 
 import { wallpaper } from "./assets";
-import { IconLink, InfoLinkType } from "./component/infoLink/InfoLink";
+import { IconLink } from "./component/infoLink/InfoLink";
 
 library.add(fab);
 library.add(fas);
