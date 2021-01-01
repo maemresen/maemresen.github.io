@@ -1,3 +1,16 @@
-.info-link {
-  text-decoration: underline;
+.icon-link {
+  -webkit-transition: color 500ms ease-in-out;
+  -moz-transition: color 500ms ease-in-out;
+  -ms-transition: color 500ms ease-in-out;
+  -o-transition: color 500ms ease-in-out;
+  transition: color 500ms ease-in-out;
+}
+
+.icon-link a {
+  color: inherit;
+  text-decoration: none;
+}
+.icon-link a:hover {
+  color: green;
+  text-decoration: none;
 }
