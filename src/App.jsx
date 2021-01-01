@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
@@ -23,15 +23,16 @@ function App() {
               <InfoCard
                 header="Mehmet Arif Emre Şen"
               >
-                {/* <Image
+                <Image
                   rounded
                   fluid
-                  src={emrePortrait}
+                  src='https://avatars2.githubusercontent.com/u/17517090?s=460&u=a0e442b6913f827d2e51e00abe143b2dbc375f33&v=4'
                   className="border border-dark"
                   style={{
                     maxWidth: "200px"
-                  }} /> */}
+                  }} />
                 <div
+                  className="border-top border-dark mt-4 pt-4"
                   style={{
                     textAlign: "justify"
                   }}>
