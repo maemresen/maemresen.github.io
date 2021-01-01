@@ -1,8 +1,0 @@
-.info-card {
-  text-align: center;
-  transition: background-color 0.5s ease;
-}
-
-.info-card .card-header, .info-card .card-footer {
-  color: darkgray;
-}
