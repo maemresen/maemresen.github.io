@@ -25,7 +25,7 @@ const InfoCard = (props) => {
         <Card
             className="info-card my-4 border-dark shadow"
             style={{
-                backgroundColor: `rgba(${cardHovered ?  hoveredBgColor: defaultBgColor}, 0.8)`
+                backgroundColor: `rgba(${cardHovered ?  hoveredBgColor: defaultBgColor}, 0.7)`
             }}
             onMouseEnter={() => toggleHoverState(true)}
             onMouseLeave={() => toggleHoverState(false)}
