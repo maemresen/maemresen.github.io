@@ -109,7 +109,7 @@ const App = () => {
                         and use them to make things easier. My life goal is
                         having my own job and creating a software community that
                         everyone can get benefit from. I have deep interest to
-                        Object Oriented Paradigm And.
+                        Object Oriented Paradigm.
                       </h5>
                     </Col>
                   </Row>
