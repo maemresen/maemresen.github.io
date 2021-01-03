@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="assets/css/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app" class="vh-100">
+      <div id="overlay" class="vh-100">
+        <div class="container-fluid" class="vh-100">
+          <div class="row h-100 justify-content-center">
+            <div class="col-lg-6 align-self-center text-center">
+              <div class="jumbotron">
+                <h1>Mehmet Arif Emre Şen</h1>
+                <h4 class="text-secondary">(a.k.a maemresen)</h4>
+                <div class="border-top border-success mt-4 pt-4">
+                  <div class="text-secondary mt-2">
+                    <div
+                      class="d-inline-block icon-link"
+                      v-for="link in linkList"
+                    >
+                      <a
+                        :href="link.url"
+                        target="_blank"
+                        rel="noopener norefferer"
+                      >
+                        <i :class="link.icon + ' mr-4 fa-2x'"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="border-top border-success mt-4 pt-4">
+                  <div class="row">
+                    <div class="col-lg-4 align-self-center text-center">
+                      <img
+                        src="https://avatars2.githubusercontent.com/u/17517090?s=460&u=a0e442b6913f827d2e51e00abe143b2dbc375f33&v=4"
+                        class="border border-dark rounded-circle img-fluid"
+                        style="max-width: 170px"
+                      />
+                    </div>
+                    <div class="col-lg-8 align-self-center text-center">
+                      <h5 class="text-secondary" style="text-align: justify">
+                        I am an entrepreneur who wants to learn new technologies
+                        and use them to make things easier. My life goal is
+                        having my own job and creating a software community that
+                        everyone can get benefit from. I have deep interest to
+                        Object Oriented Paradigm.
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="assets/vendor/jquery/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/vendor/popper/js/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.min.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          linkList: [
+            { link: "https://gitlab.com/emresen", icon: "fab fa-gitlab" },
+            { link: "https://github.com/maemresen", icon: "fab fa-github" },
+            { link: "https://medium.com/@maemresen", icon: "fab fa-medium" },
+            {
+              link: "https://www.linkedin.com/in/maemresen/",
+              icon: "fab fa-linkedin",
+            },
+            {
+              link: "mailto:maemresen@yazilim.vip",
+              icon: "fas fa-envelope",
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
