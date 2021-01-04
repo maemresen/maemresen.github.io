@@ -22,8 +22,13 @@
                 v-for="link in linkList"
                 :key="link.icon"
               >
-                <a :href="link.url" target="_blank" rel="noopener norefferer">
-                  <i :class="link.icon + ' mr-4 fa-2x'"></i>{{link.url}}
+                <a
+                  class="text-secondary"
+                  :href="link.url"
+                  target="_blank"
+                  rel="noopener norefferer"
+                >
+                  <i :class="link.icon + ' mr-4 fa-2x'"></i>
                 </a>
               </div>
             </div>
@@ -126,15 +131,15 @@ export default {
       imageRightSrc: "/assets/img/profile_pic.jpg",
       cardSectionClass: "border-top border-success mt-4 pt-4",
       linkList: [
-        { link: "https://gitlab.com/emresen", icon: "fab fa-gitlab" },
-        { link: "https://github.com/maemresen", icon: "fab fa-github" },
-        { link: "https://medium.com/@maemresen", icon: "fab fa-medium" },
+        { url: "https://gitlab.com/emresen", icon: "fab fa-gitlab" },
+        { url: "https://github.com/maemresen", icon: "fab fa-github" },
+        { url: "https://medium.com/@maemresen", icon: "fab fa-medium" },
         {
-          link: "https://www.linkedin.com/in/maemresen/",
+          url: "https://www.linkedin.com/in/maemresen/",
           icon: "fab fa-linkedin",
         },
         {
-          link: "mailto:maemresen@yazilim.vip",
+          url: "mailto:maemresen@yazilim.vip",
           icon: "fas fa-envelope",
         },
       ],
@@ -148,6 +153,10 @@ export default {
 .mae-card {
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
+}
+
+.icon-link a:hover {
+  color: green!important;
 }
 
 .mae-link {
