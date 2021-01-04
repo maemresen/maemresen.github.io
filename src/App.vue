@@ -1,6 +1,9 @@
 <template>
   <div id="app" class="h-100">
-    <div id="overlay" class="h-100 d-flex align-items-center justify-content-center">
+    <div
+      id="overlay"
+      class="h-100 d-flex align-items-center justify-content-center"
+    >
       <div class="container">
         <MaeCard />
       </div>
@@ -28,16 +31,11 @@ body {
 }
 
 #app {
-  background-image: url("/assets/img/rain_matrix.jpg");
+  background-image: url("/assets/img/rain_matrix.gif");
 }
 
 #app #overlay {
-  background-color: rgba(30, 30, 30, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: "auto";
-}
-
-#app .jumbotron {
-  background-color: rgba(10, 10, 10, 0.8);
-  color: green;
 }
 </style>

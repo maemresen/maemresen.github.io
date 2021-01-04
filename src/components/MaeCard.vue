@@ -5,7 +5,7 @@
         <div class="col-lg-3 d-flex align-items-center justify-content-center">
           <img
             :src="imageLeftSrc"
-            class="rounded-circle d-none d-lg-block"
+            class="rounded d-none d-lg-block"
             width="120"
             height="120"
           />
@@ -37,7 +37,7 @@
         <div class="col-lg-3 d-flex align-items-center justify-content-center">
           <img
             :src="imageRightSrc"
-            class="rounded-circle d-none d-lg-block"
+            class="rounded d-none d-lg-block"
             width="120"
             height="120"
           />
@@ -151,12 +151,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .mae-card {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   text-align: center;
+  border: 3px solid rgba(0, 255, 0, 0.3);
+  border-radius: 4px;
 }
 
 .icon-link a:hover {
-  color: green!important;
+  color: green !important;
 }
 
 .mae-link {
