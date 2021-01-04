@@ -23,7 +23,7 @@
                 :key="link.icon"
               >
                 <a :href="link.url" target="_blank" rel="noopener norefferer">
-                  <i :class="link.icon + ' mr-4 fa-2x'"></i>
+                  <i :class="link.icon + ' mr-4 fa-2x'"></i>{{link.url}}
                 </a>
               </div>
             </div>
