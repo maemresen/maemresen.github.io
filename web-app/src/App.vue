@@ -1,28 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="h-100">
+    <div id="overlay" class="h-100 d-flex align-items-center justify-content-center">
+      <div class="container">
+        <MaeCard />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MaeCard from "./components/MaeCard.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { MaeCard },
+};
 </script>
 
 <style>
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-image: url("/assets/img/rain_matrix.jpg");
+}
+
+#app #overlay {
+  background-color: rgba(30, 30, 30, 0.7);
+  overflow: "auto";
+}
+
+#app .jumbotron {
+  background-color: rgba(10, 10, 10, 0.8);
+  color: green;
 }
 </style>
