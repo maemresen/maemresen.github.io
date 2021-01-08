@@ -31,10 +31,10 @@ body {
 }
 
 #app {
-  background-image: url("/assets/img/rain_matrix.gif");
+  background-image: url("/assets/img/rain_matrix.jpg");
 }
 
 #app #overlay {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 </style>

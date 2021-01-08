@@ -1,13 +1,13 @@
 <template>
-  <div class="mae-card p-4 text-secondary">
+  <div class="mae-card jumbotron text-secondary">
     <div>
       <div class="row">
         <div class="col-lg-3 d-flex align-items-center justify-content-center">
           <img
             :src="imageLeftSrc"
             class="rounded d-none d-lg-block"
-            width="120"
-            height="120"
+            width="130"
+            height="130"
           />
         </div>
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
@@ -38,8 +38,8 @@
           <img
             :src="imageRightSrc"
             class="rounded d-none d-lg-block"
-            width="120"
-            height="120"
+            width="130"
+            height="130"
           />
         </div>
       </div>
@@ -69,18 +69,19 @@
     </div>
     <div :class="cardSectionClass">
       <h5>
-        We have a software community named as YazilimVIP. Feel free to visit our
-        website by the following link
+        We have a software community named as YazilimVIP.
+        <br />
+        Feel free to visit our website by the following link
       </h5>
       <h5>
         <a
           class="text-secondary mae-link"
-          href="https://maemresen.github.io/curriculum-vitae/cv_mehmet_arif_emre_sen.pdf"
+          href="https://www.yazilim.vip"
           target="_blank"
           rel="noopener norefferer"
         >
           <i class="fas fa-glass-cheers"></i>
-          <span class="mx-3">Check My Cv here...</span>
+          <span class="mx-3">www.yazilim.vip</span>
           <i class="fas fa-glass-cheers"></i>
         </a>
       </h5>
@@ -129,7 +130,7 @@ export default {
       imageLeftSrc:
         "https://avatars2.githubusercontent.com/u/17517090?s=460&u=a0e442b6913f827d2e51e00abe143b2dbc375f33&v=4",
       imageRightSrc: "/assets/img/profile_pic.jpg",
-      cardSectionClass: "border-top border-success mt-4 pt-4",
+      cardSectionClass: "mt-4",
       linkList: [
         { url: "https://gitlab.com/emresen", icon: "fab fa-gitlab" },
         { url: "https://github.com/maemresen", icon: "fab fa-github" },
