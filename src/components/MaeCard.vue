@@ -55,16 +55,11 @@
     </div>
     <div :class="cardSectionClass">
       <h5>
-        <a
-          class="text-secondary mae-link"
-          href="https://maemresen.github.io/curriculum-vitae/cv_mehmet_arif_emre_sen.pdf"
-          target="_blank"
-          rel="noopener norefferer"
-        >
+        <router-link to="/about" class="text-secondary mae-link">
           <i class="fas fa-file"></i>
           <span class="mx-3">Check My Cv here...</span>
           <i class="fas fa-file"></i>
-        </a>
+        </router-link>
       </h5>
     </div>
     <div :class="cardSectionClass">

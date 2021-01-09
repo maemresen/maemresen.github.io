@@ -1,24 +1,14 @@
 <template>
   <div id="app" class="h-100">
-    <div
-      id="overlay"
-      class="h-100 d-flex align-items-center justify-content-center"
-    >
-      <div class="container">
-        <MaeCard />
+    <div id="overlay" class="h-100">
+      <div
+        class="container h-100 d-flex align-items-center justify-content-center"
+      >
+        <router-view />
       </div>
     </div>
   </div>
 </template>
-
-<script>
-import MaeCard from "./components/MaeCard.vue";
-
-export default {
-  name: "App",
-  components: { MaeCard },
-};
-</script>
 
 <style>
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
