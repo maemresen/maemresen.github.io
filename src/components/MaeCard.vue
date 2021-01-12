@@ -59,7 +59,7 @@
           <i class="fas fa-file"></i>
           <span class="mx-3">Check My Cv here...</span>
           <i class="fas fa-file"></i>
-        </router-link>
+        </a>
       </h5>
     </div>
     <div :class="cardSectionClass">
