@@ -21,7 +21,7 @@ body {
 }
 
 #app {
-  background-image: url("/assets/img/rain_matrix.jpg");
+  background-image: url("/assets/img/mustang_old_black.jpg");
 }
 
 #app #overlay {
