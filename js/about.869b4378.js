@@ -1,2 +1,2 @@
 (window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{1826:function(t,e,a){"use strict";a.r(e);var s=function(){var t=this,e=t.$createElement,a=t._self._c||e;return a("div",{staticClass:"d-flex w-100 h-100 flex-column"},[a("router-link",{staticClass:"p-3 btn text-white bg-dark d-flex align-items-center",attrs:{to:"/"}},[a("span",{staticClass:"mx-auto"},[a("i",{staticClass:"fas fa-chevron-left mr-2"}),t._v(" Home ")])]),a("iframe",{attrs:{src:"https://maemresen.github.io/curriculum-vitae/cv_mehmet_arif_emre_sen.pdf",width:"100%",height:"100%",frameborder:"0"}})],1)},r=[],i=a("2877"),n={},l=Object(i["a"])(n,s,r,!1,null,null,null);e["default"]=l.exports}}]);
-//# sourceMappingURL=about.550884ba.js.map
+//# sourceMappingURL=about.869b4378.js.map
