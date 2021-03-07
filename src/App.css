@@ -30,3 +30,8 @@ body {
 .mae-text-green {
   color: green;
 }
+
+.mae-paragraph {
+  text-align: justify;
+  font-size: 1.25rem;
+}

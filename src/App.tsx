@@ -106,36 +106,46 @@ const Maecard = () => {
       <div className="mt-4">
         <div className="row justify-content-center">
           <div className="col-lg-6">
-            <h5
-              style={{
-                textAlign: "justify",
-              }}
-            >
-              {data.aboutMe}
-            </h5>
+            <p className="mae-paragraph">{data.aboutMe}</p>
           </div>
         </div>
       </div>
       <div className="mt-4">
-        <h5>
+        <h5 className="mae-text-green">
+          <FontAwesomeIcon icon={faFile} />
+          <span className="mx-3">Check My Cv here</span>
+          <FontAwesomeIcon icon={faFile} />
+        </h5>
+        <h5 className="d-inline mx-3">
           <a
             href="https://cv.yazilim.vip/mehmet-arif-emre-sen.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary mae-link"
           >
-            <FontAwesomeIcon icon={faFile} />
-            <span className="mx-3">Check My Cv here...</span>
-            <FontAwesomeIcon icon={faFile} />
+            English...
+          </a>
+        </h5>
+        <h5 className="d-inline mx-3">
+          <a
+            href="https://cv.yazilim.vip/mehmet-arif-emre-sen-tr.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary mae-link"
+          >
+            Türkçe...
           </a>
         </h5>
       </div>
       <div className="mt-4">
-        <h5>
-          We have a software community named as YazilimVIP.
-          <br />
-          Feel free to visit our website by the following link
-        </h5>
+        <div className="row justify-content-center">
+          <div className="col-lg-6">
+            <p className="mae-paragraph">
+              We have a software community named as YazilimVIP.
+              Feel free to visit our website by the following link
+            </p>
+          </div>
+        </div>
         <h5>
           <a
             className="text-secondary mae-link"
@@ -150,23 +160,21 @@ const Maecard = () => {
         </h5>
       </div>
       <div className="mt-4">
+        <h5>Also, I am a Linux User.</h5>
+        <div className="my-4">
+          <FontAwesomeIcon icon={faLinux} size="4x" />
+        </div>
         <h5>
-          <div>Also, I am a Linux User.</div>
-          <div className="my-4">
-            <FontAwesomeIcon icon={faLinux} size="4x" />
-          </div>
-          <div>
-            <a
-              className="text-secondary mae-link"
-              href="https://manjaro.org/downloads/official/xfce/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faThumbsUp} />
-              <span className="mx-3">Preffered Distro: Manjaro XFCE</span>
-              <FontAwesomeIcon icon={faThumbsUp} />
-            </a>
-          </div>
+          <a
+            className="text-secondary mae-link"
+            href="https://manjaro.org/downloads/official/xfce/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faThumbsUp} />
+            <span className="mx-3">Preffered Distro: Manjaro XFCE</span>
+            <FontAwesomeIcon icon={faThumbsUp} />
+          </a>
         </h5>
       </div>
     </div>
