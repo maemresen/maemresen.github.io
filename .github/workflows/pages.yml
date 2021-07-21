@@ -31,7 +31,7 @@ jobs:
           path: build
       - name: Prepare Deployment
         run: |
-          echo "www.maemresen.vip" > ./build/CNAME
+          echo "www.maemresen.com" > ./build/CNAME
       - name: GH Pages Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
