@@ -6,6 +6,8 @@ body {
 
 #root {
   background-image: url("./assets/img/mustang_old_black.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #root #overlay {
