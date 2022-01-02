@@ -14,6 +14,9 @@ export const CardTitle = ({name, nickname}) => {
                     a.k.a. {nickname}
                 </Typography>
             )}
+
+            <FontAwesomeIco icon={["fab", "github"]} />
+
         </div>
     )
 };
