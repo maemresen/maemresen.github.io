@@ -1,11 +1,15 @@
-html, body, #root, #app {
+html, body {
     height: 100%;
     margin: 0;
 }
 
 
-#root {
+html {
     background-image: url("./assets/img/mustang_old_black.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.70);
 }
