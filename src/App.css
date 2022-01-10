@@ -1,0 +1,11 @@
+html, body, #root, #app {
+    height: 100%;
+    margin: 0;
+}
+
+
+#root {
+    background-image: url("./assets/img/mustang_old_black.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
