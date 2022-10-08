@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChampagneGlasses, faFile } from '@fortawesome/free-solid-svg-icons';
 import { COLORS } from './utils/styles';
 
+import profilePic from './assets/images/profile_pic.jpg';
 import './App.css';
 
 const TitleContainer = styled.div`
@@ -61,7 +62,7 @@ const MainContainer = styled.div`
 `;
 
 const App = () => (
-  <Container>
+  <Col xs={{ span: 12 }} md={{ span: 10, offset: 1 }} xl={{ span: 8, offset: 2 }}>
     <MainContainer className="p-4">
       <Container>
         <Row>
@@ -87,7 +88,7 @@ const App = () => (
                 className="d-none d-lg-block"
                 width="130"
                 rounded
-                src="https://maemresen.com/static/media/profile_pic.eb8d4952.jpg"
+                src={profilePic}
               />
             </ImageContainer>
           </Col>
@@ -150,7 +151,7 @@ const App = () => (
         </Row>
       </Container>
     </MainContainer>
-  </Container>
+  </Col>
 );
 
 export default App;
