@@ -3,11 +3,21 @@ import Image from 'react-bootstrap/Image';
 import { Col, Container, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChampagneGlasses, faFile } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChampagneGlasses,
+  faEnvelope,
+  faFile,
+} from '@fortawesome/free-solid-svg-icons';
 import { COLORS } from './utils/styles';
 
 import profilePic from './assets/images/profile_pic.jpg';
 import './App.css';
+import {
+  faGithub,
+  faGitlab,
+  faLinkedin,
+  faMedium,
+} from '@fortawesome/free-brands-svg-icons';
 
 const TitleContainer = styled.div`
   height: 100%;
@@ -19,11 +29,17 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  color: ${COLORS.PRIMARY}
+  color: ${COLORS.PRIMARY};
 `;
 
 const SubTitle = styled.h3`
-  color: ${COLORS.SECONDARY}
+  color: ${COLORS.SECONDARY};
+`;
+
+const References = styled.div`
+  color: ${COLORS.SECONDARY};
+  
+  display: flex;
 `;
 
 const Section = styled.div`
@@ -61,6 +77,12 @@ const MainContainer = styled.div`
   background-color: rgba(0,0,0,.3)
 `;
 
+const ReferenceLink = styled(MaeLink)`
+  &:hover{
+    color: ${COLORS.PRIMARY} !important;
+  }
+`;
+
 const App = () => (
   <Col xs={{ span: 12 }} md={{ span: 10, offset: 1 }} xl={{ span: 8, offset: 2 }}>
     <MainContainer className="p-4">
@@ -80,6 +102,38 @@ const App = () => (
             <TitleContainer>
               <Title>Mehmet Arif Emre Şen</Title>
               <SubTitle>(a.k.a maemresen)</SubTitle>
+              <References>
+                <ReferenceLink
+                  target="_blank"
+                  href="https://gitlab.com/emresen"
+                >
+                  <FontAwesomeIcon icon={faGitlab} className="mx-3 mt-2" size="2x" />
+                </ReferenceLink>
+                <ReferenceLink
+                  target="_blank"
+                  href="https://github.com/maemresen"
+                >
+                  <FontAwesomeIcon icon={faGithub} className="mx-3 mt-2" size="2x" />
+                </ReferenceLink>
+                <ReferenceLink
+                  target="_blank"
+                  href="https://medium.com/@maemresen"
+                >
+                  <FontAwesomeIcon icon={faMedium} className="mx-3 mt-2" size="2x" />
+                </ReferenceLink>
+                <ReferenceLink
+                  target="_blank"
+                  href="https://www.linkedin.com/in/maemresen/"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} className="mx-3 mt-2" size="2x" />
+                </ReferenceLink>
+                <ReferenceLink
+                  target="_blank"
+                  href="mailto:maemresen@yazilim.vip"
+                >
+                  <FontAwesomeIcon icon={faEnvelope} className="mx-3 mt-2" size="2x" />
+                </ReferenceLink>
+              </References>
             </TitleContainer>
           </Col>
           <Col md={2} xxl={3}>
