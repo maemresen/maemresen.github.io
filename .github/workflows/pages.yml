@@ -10,10 +10,10 @@ jobs:
         with:
           node-version: "12.x"
           registry-url: "https://npm.pkg.github.com/yazilim-vip"
-      - name: Yarn Build
+      - name: npm Build
         run: |
-          yarn install
-          yarn build
+          npm install
+          npm build
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@master

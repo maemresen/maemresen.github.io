@@ -1,39 +1,21 @@
-html,
+html {
+  min-height: 100%;
+}
+
 body {
-  margin: 0;
-  height: 100%;
+  background-image: url('./assets/images/mustang_old_black.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  min-height: 100vh;
 }
 
 #root {
-  background-image: url("./assets/img/mustang_old_black.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0,0,0,.75);
 
-#root #overlay {
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
-.mae-card {
-  background-color: rgba(0, 0, 0, 0.3);
-  text-align: center;
-  border: 3px solid rgba(0, 255, 0, 0.3);
-  border-radius: 4px;
-}
-
-.icon-link a:hover {
-  color: green !important;
-}
-
-.mae-link {
-  text-decoration: underline;
-}
-
-.mae-text-green {
-  color: green;
-}
-
-.mae-paragraph {
-  text-align: justify;
-  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
 }
