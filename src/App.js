@@ -5,13 +5,29 @@ import styled from 'styled-components';
 import { COLORS } from './utils/styles';
 
 const TitleContainer = styled.div`
+  height: 100%;
+
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 `;
 
-const Title = styled.span`
+const Title = styled.h1`
   color: ${COLORS.PRIMARY}
+`;
+
+const SubTitle = styled.h3`
+  color: ${COLORS.SECONDARY}
+`;
+
+const Section = styled.div`
+  color: ${({ primary }) => (primary ? COLORS.PRIMARY : COLORS.SECONDARY)};
+  text-align: justify;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const App = () => (
@@ -27,6 +43,7 @@ const App = () => (
       <Col md={8}>
         <TitleContainer>
           <Title>Mehmet Arif Emre Şen</Title>
+          <SubTitle>(a.k.a maemresen)</SubTitle>
         </TitleContainer>
       </Col>
       <Col md={2}>
@@ -35,6 +52,34 @@ const App = () => (
           rounded
           src="https://maemresen.com/static/media/profile_pic.eb8d4952.jpg"
         />
+      </Col>
+    </Row>
+    <Row>
+      <Col md={{
+        span: 8,
+        offset: 2,
+      }}
+      >
+        <Section className="mb-4">
+          I am an entrepreneur who wants to learn ne w technologies and use
+          them
+          to
+          make things easier. My life goal is having my own job and creating a
+          software community that everyone can get benefit from. I have deep
+          interest to Object Oriented Paradigm.
+        </Section>
+        <Section className="mb-4" primary>
+          <div>
+            Check My Cv here
+          </div>
+          <div>
+            English...Türkçe...
+          </div>
+        </Section>
+        <Section className="mb-4">
+          We have a software community named as YazilimVIP. Feel free to visit
+          our website by the following link
+        </Section>
       </Col>
     </Row>
   </Container>
