@@ -160,27 +160,16 @@ const App = () => (
             <Section className="mt-4" primary>
               <h5>
                 <FontAwesomeIcon icon={faFile} />
-                <span className="mx-3">Check My Cv here</span>
+                <span className="mx-3">
+                      <MaeLink
+                        target="_blank"
+                        href="https://docs.google.com/document/d/1T42aU_cMhW1rbW-2Ff2a3OZSM7XHXyiCWWP9q452IQE/edit?usp=sharing"
+                      >
+                        Check My Cv here
+                      </MaeLink>
+                </span>
                 <FontAwesomeIcon icon={faFile} />
               </h5>
-              <CvContainer>
-                <h5 className="d-inline">
-                  <MaeLink
-                    target="_blank"
-                    href="https://docs.google.com/document/d/1T42aU_cMhW1rbW-2Ff2a3OZSM7XHXyiCWWP9q452IQE/edit?usp=sharing"
-                  >
-                    English...
-                  </MaeLink>
-                </h5>
-                <h5 className="d-inline">
-                  <MaeLink
-                    target="_blank"
-                    href="https://cv.yazilim.vip/mehmet-arif-emre-sen-tr.pdf"
-                  >
-                    Türkçe...
-                  </MaeLink>
-                </h5>
-              </CvContainer>
             </Section>
             <Section className="mt-4">
               We have a software community named as YazilimVIP. Feel free to visit
