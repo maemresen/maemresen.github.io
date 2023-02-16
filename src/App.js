@@ -167,7 +167,7 @@ const App = () => (
                 <h5 className="d-inline">
                   <MaeLink
                     target="_blank"
-                    href="https://cv.yazilim.vip/mehmet-arif-emre-sen.pdf"
+                    href="https://docs.google.com/document/d/1T42aU_cMhW1rbW-2Ff2a3OZSM7XHXyiCWWP9q452IQE/edit?usp=sharing"
                   >
                     English...
                   </MaeLink>
