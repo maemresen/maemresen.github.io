@@ -163,7 +163,7 @@ const App = () => (
                 <span className="mx-3">
                       <MaeLink
                         target="_blank"
-                        href="https://docs.google.com/document/d/1T42aU_cMhW1rbW-2Ff2a3OZSM7XHXyiCWWP9q452IQE/edit?usp=sharing"
+                        href="https://docs.google.com/document/d/1T42aU_cMhW1rbW-2Ff2a3OZSM7XHXyiCWWP9q452IQE/export?format=pdf"
                       >
                         Check My Cv here
                       </MaeLink>
