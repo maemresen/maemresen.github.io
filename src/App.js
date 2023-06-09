@@ -164,6 +164,7 @@ const App = () => (
                       <MaeLink
                         target="_blank"
                         href="https://docs.google.com/document/d/1T42aU_cMhW1rbW-2Ff2a3OZSM7XHXyiCWWP9q452IQE/export?format=pdf"
+                        href="https://docs.google.com/document/d/14MLzPsM90Nw_TzQt698j-EDf5iPgBw8s/export?format=pdf"
                       >
                         Check My Cv here
                       </MaeLink>
