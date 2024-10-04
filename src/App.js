@@ -150,12 +150,9 @@ const App = () => (
         <Row>
           <Col md={{ span: 8, offset: 2 }} xxl={{ span: 6, offset: 3 }}>
             <Section className="mt-4">
-              I am an entrepreneur who wants to learn ne w technologies and use
-              them
-              to
-              make things easier. My life goal is having my own job and creating a
-              software community that everyone can get benefit from. I have deep
-              interest to Object Oriented Paradigm.
+              I'm a tech-driven software engineer aiming to simplify tasks using innovative technologies.
+              My life goal is having my own job and creating a software community that everyone can get benefit from. 
+              I have deep interest to Object Oriented Paradigm.
             </Section>
             <Section className="mt-4" primary>
               <h5>
