@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { COLORS } from './utils/styles';
 
-import profilePic from './assets/images/profile_pic.jpg';
+const profilePic = 'https://avatars2.githubusercontent.com/u/17517090?s=460&u=a0e442b6913f827d2e51e00abe143b2dbc375f33&v=4';
 import './App.css';
 import {
   faGithub,
@@ -167,92 +167,111 @@ const SKILLS = [
 ];
 
 const SOCIALS = [
-  { icon: faGitlab, href: 'https://gitlab.com/emresen' },
-  { icon: faGithub, href: 'https://github.com/maemresen' },
-  { icon: faMedium, href: 'https://medium.com/@maemresen' },
-  { icon: faLinkedin, href: 'https://www.linkedin.com/in/maemresen/' },
-  { icon: faEnvelope, href: 'mailto:maemresen@yazilim.vip' },
+  { icon: faGitlab, href: 'https://gitlab.com/emresen', label: 'GitLab' },
+  { icon: faGithub, href: 'https://github.com/maemresen', label: 'GitHub' },
+  { icon: faMedium, href: 'https://medium.com/@maemresen', label: 'Medium' },
+  { icon: faLinkedin, href: 'https://www.linkedin.com/in/maemresen/', label: 'LinkedIn' },
+  { icon: faEnvelope, href: 'mailto:maemresen@yazilim.vip', label: 'Email' },
 ];
 
 const App = () => (
-  <MainCard>
+  <MainCard as="article" itemScope itemType="https://schema.org/Person">
     <Container fluid>
-      {/* Header */}
-      <Row className="justify-content-center text-center">
-        <Col xs={12} className="d-flex flex-column align-items-center">
-          <ProfileImage src={profilePic} roundedCircle />
-          <Name className="mt-3">Mehmet Arif Emre Sen</Name>
-          <Handle>@maemresen</Handle>
-          <div className="d-flex gap-3 mb-3">
-            {SOCIALS.map((s) => (
-              <SocialLink key={s.href} href={s.href} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={s.icon} size="lg" />
-              </SocialLink>
-            ))}
-          </div>
-          <Bio>
-            Software engineer focused on building clean, scalable systems.
-            Passionate about open source and knowledge sharing through
-            the YazilimVIP community.
-          </Bio>
-        </Col>
-      </Row>
+      <header>
+        <Row className="justify-content-center text-center">
+          <Col xs={12} className="d-flex flex-column align-items-center">
+            <ProfileImage
+              src={profilePic}
+              roundedCircle
+              alt="Mehmet Arif Emre Sen"
+              itemProp="image"
+            />
+            <Name className="mt-3" itemProp="name">Mehmet Arif Emre Sen</Name>
+            <Handle>@maemresen</Handle>
+            <nav aria-label="Social links" className="d-flex gap-3 mb-3">
+              {SOCIALS.map((s) => (
+                <SocialLink
+                  key={s.href}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  itemProp="sameAs"
+                >
+                  <FontAwesomeIcon icon={s.icon} size="lg" />
+                </SocialLink>
+              ))}
+            </nav>
+            <Bio itemProp="description">
+              Software engineer focused on building clean, scalable systems.
+              Passionate about open source and knowledge sharing through
+              the YazilimVIP community.
+            </Bio>
+          </Col>
+        </Row>
+      </header>
 
       <Divider />
 
-      {/* Skills */}
-      <Row className="justify-content-center text-center">
-        <Col xs={12}>
-          <SectionTitle className="justify-content-center">
-            <FontAwesomeIcon icon={faCode} />
-            Tech Stack
-          </SectionTitle>
-          <div className="d-flex flex-wrap gap-2 justify-content-center">
-            {SKILLS.map((s) => (
-              <SkillBadge key={s.label}>
-                <FontAwesomeIcon icon={s.icon} />
-                {s.label}
-              </SkillBadge>
-            ))}
-          </div>
-        </Col>
-      </Row>
+      <section aria-label="Tech Stack">
+        <Row className="justify-content-center text-center">
+          <Col xs={12}>
+            <SectionTitle className="justify-content-center">
+              <FontAwesomeIcon icon={faCode} />
+              Tech Stack
+            </SectionTitle>
+            <div className="d-flex flex-wrap gap-2 justify-content-center">
+              {SKILLS.map((s) => (
+                <SkillBadge key={s.label} itemProp="knowsAbout">
+                  <FontAwesomeIcon icon={s.icon} />
+                  {s.label}
+                </SkillBadge>
+              ))}
+            </div>
+          </Col>
+        </Row>
+      </section>
 
       <Divider />
 
-      {/* Actions */}
-      <Row className="justify-content-center text-center">
-        <Col xs={12}>
-          <div className="d-flex flex-wrap gap-3 justify-content-center">
-            <PrimaryButton
-              href="https://drive.google.com/file/d/1YW1Tekf5oTMoqJIt1J-eKq8mGEkMV811/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faDownload} />
-              Download CV
-            </PrimaryButton>
-            <ActionButton
-              href="https://www.yazilim.vip"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faUsers} />
-              YazilimVIP Community
-            </ActionButton>
-          </div>
-        </Col>
-      </Row>
-      {/* Footer */}
+      <section aria-label="Actions">
+        <Row className="justify-content-center text-center">
+          <Col xs={12}>
+            <div className="d-flex flex-wrap gap-3 justify-content-center">
+              <PrimaryButton
+                href="https://drive.google.com/file/d/1YW1Tekf5oTMoqJIt1J-eKq8mGEkMV811/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download CV"
+              >
+                <FontAwesomeIcon icon={faDownload} />
+                Download CV
+              </PrimaryButton>
+              <ActionButton
+                href="https://www.yazilim.vip"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit YazilimVIP Community"
+              >
+                <FontAwesomeIcon icon={faUsers} />
+                YazilimVIP Community
+              </ActionButton>
+            </div>
+          </Col>
+        </Row>
+      </section>
+
       <Divider />
-      <Row className="justify-content-center text-center">
-        <Col xs={12}>
-          <Footer>
-            <FontAwesomeIcon icon={faRobot} />
-            {' Built with Claude Code'}
-          </Footer>
-        </Col>
-      </Row>
+      <footer>
+        <Row className="justify-content-center text-center">
+          <Col xs={12}>
+            <Footer>
+              <FontAwesomeIcon icon={faRobot} />
+              {' Built with Claude Code'}
+            </Footer>
+          </Col>
+        </Row>
+      </footer>
     </Container>
   </MainCard>
 );
