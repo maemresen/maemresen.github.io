@@ -9,10 +9,14 @@ import {
   faCode,
   faUsers,
   faRobot,
+  faBriefcase,
+  faLocationDot,
+  faServer,
+  faDatabase,
+  faCloud,
 } from '@fortawesome/free-solid-svg-icons';
 import { COLORS } from './utils/styles';
 
-const profilePic = 'https://avatars2.githubusercontent.com/u/17517090?s=460&u=a0e442b6913f827d2e51e00abe143b2dbc375f33&v=4';
 import './App.css';
 import {
   faGithub,
@@ -20,14 +24,11 @@ import {
   faLinkedin,
   faMedium,
   faJava,
-  faJs,
-  faReact,
   faDocker,
   faAws,
-  faGitAlt,
-  faPython,
-  faLinux,
 } from '@fortawesome/free-brands-svg-icons';
+
+const profilePic = 'https://avatars.githubusercontent.com/u/17517090?v=4';
 
 const glowPulse = keyframes`
   0%, 100% { box-shadow: 0 0 15px rgba(0, 204, 102, 0.15); }
@@ -35,7 +36,7 @@ const glowPulse = keyframes`
 `;
 
 const MainCard = styled.div`
-  max-width: 720px;
+  max-width: 780px;
   width: 100%;
   border: 1px solid ${COLORS.BORDER};
   border-radius: 16px;
@@ -62,7 +63,24 @@ const Name = styled.h1`
 const Handle = styled.p`
   color: ${COLORS.SECONDARY_DARK};
   font-size: 1rem;
+  margin-bottom: 0.5rem;
+`;
+
+const RoleInfo = styled.p`
+  color: ${COLORS.SECONDARY_DARK};
+  font-size: 0.85rem;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+`;
+
+const RoleItem = styled.span`
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 `;
 
 const Bio = styled.p`
@@ -70,7 +88,7 @@ const Bio = styled.p`
   font-size: 0.95rem;
   line-height: 1.6;
   text-align: center;
-  max-width: 520px;
+  max-width: 560px;
   margin: 0 auto;
 `;
 
@@ -101,17 +119,35 @@ const SectionTitle = styled.h5`
   gap: 0.5rem;
 `;
 
+const SkillCategory = styled.div`
+  margin-bottom: 0.75rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+const SkillCategoryLabel = styled.span`
+  color: ${COLORS.SECONDARY_DARK};
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.4rem;
+`;
+
 const SkillBadge = styled.span`
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: ${COLORS.SECONDARY};
   background: ${COLORS.BG_BADGE};
   border: 1px solid ${COLORS.BORDER};
 `;
+
 
 const ActionButton = styled.a`
   display: inline-flex;
@@ -155,16 +191,36 @@ const Footer = styled.p`
   gap: 6px;
 `;
 
-const SKILLS = [
-  { icon: faJava, label: 'Java' },
-  { icon: faJs, label: 'JavaScript' },
-  { icon: faReact, label: 'React' },
-  { icon: faPython, label: 'Python' },
-  { icon: faDocker, label: 'Docker' },
-  { icon: faAws, label: 'AWS' },
-  { icon: faGitAlt, label: 'Git' },
-  { icon: faLinux, label: 'Linux' },
+const SKILL_CATEGORIES = [
+  {
+    label: 'Backend',
+    skills: [
+      { icon: faJava, label: 'Java' },
+      { icon: faServer, label: 'Spring Boot' },
+      { icon: faDatabase, label: 'PostgreSQL' },
+      { icon: faServer, label: 'Kafka' },
+    ],
+  },
+  {
+    label: 'DevOps & Cloud',
+    skills: [
+      { icon: faDocker, label: 'Docker' },
+      { icon: faCloud, label: 'Kubernetes' },
+      { icon: faCloud, label: 'Terraform' },
+      { icon: faAws, label: 'AWS' },
+      { icon: faGitlab, label: 'CI/CD' },
+    ],
+  },
+  {
+    label: 'Architecture & AI',
+    skills: [
+      { icon: faServer, label: 'Microservices' },
+      { icon: faServer, label: 'OAuth 2.0 / Keycloak' },
+      { icon: faRobot, label: 'MCP / AI Agents' },
+    ],
+  },
 ];
+
 
 const SOCIALS = [
   { icon: faGitlab, href: 'https://gitlab.com/emresen', label: 'GitLab' },
@@ -188,6 +244,16 @@ const App = () => (
             />
             <Name className="mt-3" itemProp="name">Mehmet Arif Emre Sen</Name>
             <Handle>@maemresen</Handle>
+            <RoleInfo>
+              <RoleItem>
+                <FontAwesomeIcon icon={faBriefcase} />
+                <span itemProp="worksFor">Kuehne + Nagel</span>
+              </RoleItem>
+              <RoleItem>
+                <FontAwesomeIcon icon={faLocationDot} />
+                <span itemProp="address">Estonia</span>
+              </RoleItem>
+            </RoleInfo>
             <nav aria-label="Social links" className="d-flex gap-3 mb-3">
               {SOCIALS.map((s) => (
                 <SocialLink
@@ -203,9 +269,10 @@ const App = () => (
               ))}
             </nav>
             <Bio itemProp="description">
-              Software engineer focused on building clean, scalable systems.
-              Passionate about open source and knowledge sharing through
-              the YazilimVIP community.
+              Software engineer specializing in Java Spring Boot, microservices
+              architecture, and cloud-native infrastructure. 8+ years of
+              experience across fintech, logistics, and IoT domains.
+              Co-founder of YazilimVIP open-source community.
             </Bio>
           </Col>
         </Row>
@@ -220,14 +287,19 @@ const App = () => (
               <FontAwesomeIcon icon={faCode} />
               Tech Stack
             </SectionTitle>
-            <div className="d-flex flex-wrap gap-2 justify-content-center">
-              {SKILLS.map((s) => (
-                <SkillBadge key={s.label} itemProp="knowsAbout">
-                  <FontAwesomeIcon icon={s.icon} />
-                  {s.label}
-                </SkillBadge>
-              ))}
-            </div>
+            {SKILL_CATEGORIES.map((cat) => (
+              <SkillCategory key={cat.label}>
+                <SkillCategoryLabel>{cat.label}</SkillCategoryLabel>
+                <div className="d-flex flex-wrap gap-2 justify-content-center">
+                  {cat.skills.map((s) => (
+                    <SkillBadge key={s.label} itemProp="knowsAbout">
+                      <FontAwesomeIcon icon={s.icon} />
+                      {s.label}
+                    </SkillBadge>
+                  ))}
+                </div>
+              </SkillCategory>
+            ))}
           </Col>
         </Row>
       </section>
@@ -239,9 +311,8 @@ const App = () => (
           <Col xs={12}>
             <div className="d-flex flex-wrap gap-3 justify-content-center">
               <PrimaryButton
-                href="https://drive.google.com/file/d/1YW1Tekf5oTMoqJIt1J-eKq8mGEkMV811/view?usp=drive_link"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/cv.pdf"
+                download="Mehmet_Arif_Emre_Sen_CV.pdf"
                 aria-label="Download CV"
               >
                 <FontAwesomeIcon icon={faDownload} />

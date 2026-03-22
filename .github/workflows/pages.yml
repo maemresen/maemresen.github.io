@@ -14,6 +14,8 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
+      - name: Generate CV PDF
+        run: npm run build:cv
       - name: Add CNAME
         run: echo "maemresen.com" > ./build/CNAME
       - name: Deploy to GitHub Pages
