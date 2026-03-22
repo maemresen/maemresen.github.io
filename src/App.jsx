@@ -247,11 +247,11 @@ const App = () => (
             <RoleInfo>
               <RoleItem>
                 <FontAwesomeIcon icon={faBriefcase} />
-                <span itemProp="worksFor">Kuehne + Nagel</span>
+                <span itemProp="worksFor">Kuehne+Nagel</span>
               </RoleItem>
               <RoleItem>
                 <FontAwesomeIcon icon={faLocationDot} />
-                <span itemProp="address">Estonia</span>
+                <span itemProp="address">Tallinn, Estonia</span>
               </RoleItem>
             </RoleInfo>
             <nav aria-label="Social links" className="d-flex gap-3 mb-3">
@@ -272,7 +272,7 @@ const App = () => (
               Software engineer specializing in Java Spring Boot, microservices
               architecture, and cloud-native infrastructure. 8+ years of
               experience across fintech, logistics, and IoT domains.
-              Co-founder of YazilimVIP open-source community.
+              Creator of YazilimVIP open-source community.
             </Bio>
           </Col>
         </Row>
