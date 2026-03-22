@@ -43,7 +43,7 @@ const References = styled.div`
 `;
 
 const Section = styled.div`
-  color: ${({ primary }) => (primary ? COLORS.PRIMARY : COLORS.SECONDARY)};
+  color: ${({ $primary }) => ($primary ? COLORS.PRIMARY : COLORS.SECONDARY)};
   text-align: justify;
 
   display: flex;
@@ -150,11 +150,11 @@ const App = () => (
         <Row>
           <Col md={{ span: 8, offset: 2 }} xxl={{ span: 6, offset: 3 }}>
             <Section className="mt-4">
-              I'm a tech-driven software engineer aiming to simplify tasks using innovative technologies.
+              I&apos;m a tech-driven software engineer aiming to simplify tasks using innovative technologies.
               My life goal is having my own job and creating a software community that everyone can get benefit from. 
               I have deep interest to Object Oriented Paradigm.
             </Section>
-            <Section className="mt-4" primary>
+            <Section className="mt-4" $primary>
               <h5>
                 <FontAwesomeIcon icon={faFile} />
                 <span className="mx-3">
