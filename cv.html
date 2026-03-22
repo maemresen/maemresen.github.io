@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehmet Arif Emre Şen - CV</title>
+  <link rel="stylesheet" href="fontawesome/all.min.css">
+  <style>
+    @page { size: A4; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #e8e0d8;
+      color: #333;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      display: flex;
+      background: #fff;
+    }
+
+    /* ---- Sidebar ---- */
+    .sidebar {
+      width: 32%;
+      background: #f5e6d3;
+      padding: 20px 18px;
+      border-left: 5px solid #4aae9b;
+    }
+    .profile-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 12px;
+      border: 3px solid #4aae9b;
+    }
+    .sidebar h2 {
+      color: #4aae9b;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      margin-top: 4px;
+      border-bottom: 1px solid rgba(74, 174, 155, 0.3);
+      padding-bottom: 3px;
+    }
+    .sidebar .section { margin-bottom: 14px; }
+
+    /* Contact */
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+      font-size: 9px;
+      color: #444;
+    }
+    .contact-item .icon {
+      width: 16px;
+      text-align: center;
+      color: #4aae9b;
+      font-size: 11px;
+    }
+    .contact-item a {
+      color: #444;
+      text-decoration: none;
+    }
+    .contact-item a:hover { color: #4aae9b; }
+
+    /* About Me */
+    .about-text {
+      font-size: 9px;
+      color: #555;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    /* Skills */
+    .skill-category {
+      margin-bottom: 3px;
+    }
+    .skill-category-label {
+      color: #333;
+      font-size: 9px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .skill-category-items {
+      color: #555;
+      font-size: 9px;
+      line-height: 1.5;
+    }
+
+    /* Language */
+    .lang-item {
+      margin-bottom: 4px;
+      font-size: 10px;
+    }
+    .lang-name {
+      font-weight: 600;
+      color: #333;
+    }
+    .lang-detail {
+      color: #666;
+      font-size: 9.5px;
+    }
+
+    /* Events */
+    .event-item {
+      font-size: 10px;
+      color: #555;
+      margin-bottom: 3px;
+    }
+    .event-item strong {
+      color: #333;
+    }
+
+    /* ---- Main content ---- */
+    .main {
+      width: 68%;
+      padding: 20px 22px;
+      background: #fff;
+    }
+
+    /* Name header */
+    .name-header {
+      margin-bottom: 12px;
+    }
+    .name-header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #333;
+      line-height: 1.2;
+    }
+    .name-header h1 .accent {
+      color: #e8734a;
+    }
+    .name-header .subtitle {
+      color: #666;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    /* Section headings */
+    .main .section { margin-bottom: 14px; }
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      border-bottom: 2px solid #4aae9b;
+      padding-bottom: 4px;
+    }
+    .section-heading .icon {
+      color: #4aae9b;
+      font-size: 14px;
+    }
+    .section-heading h2 {
+      color: #4aae9b;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Jobs */
+    .job {
+      margin-bottom: 10px;
+      padding-left: 18px;
+      position: relative;
+      page-break-inside: avoid;
+    }
+    .job::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #4aae9b;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+    .job-title {
+      color: #4aae9b;
+      font-weight: 700;
+      font-size: 11px;
+    }
+    .job-date {
+      color: #e8734a;
+      font-size: 9px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .job-company {
+      color: #888;
+      font-size: 10px;
+      margin-bottom: 4px;
+    }
+
+    /* Sub-project */
+    .job-project-item {
+      margin-top: 4px;
+      margin-bottom: 4px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .job-project-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: 2px solid #4aae9b;
+      background: #fff;
+    }
+    .job-project-name {
+      color: #333;
+      font-weight: 700;
+      font-size: 9.5px;
+      margin-bottom: 2px;
+    }
+    .job-project-name a {
+      color: #333;
+      text-decoration: none;
+    }
+    .job-project-name a:hover { color: #4aae9b; }
+    .job-desc {
+      color: #555;
+      font-size: 9.5px;
+      line-height: 1.45;
+      text-align: left;
+    }
+
+    /* Education */
+    .edu-item {
+      margin-bottom: 8px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .edu-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #4aae9b;
+    }
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-title {
+      color: #4aae9b;
+      font-weight: 700;
+      font-size: 11px;
+    }
+    .edu-date {
+      color: #e8734a;
+      font-size: 10px;
+      font-weight: 600;
+    }
+    .edu-meta {
+      color: #888;
+      font-size: 10px;
+    }
+
+    /* Publications */
+    .pub-item {
+      margin-bottom: 6px;
+      padding-left: 18px;
+      position: relative;
+      page-break-inside: avoid;
+    }
+    .pub-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #4aae9b;
+    }
+    .pub-label {
+      color: #888;
+      font-size: 9.5px;
+      font-weight: 600;
+    }
+    .pub-title {
+      color: #333;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .pub-journal {
+      color: #888;
+      font-size: 9.5px;
+      font-style: italic;
+    }
+    .pub-authors {
+      color: #888;
+      font-size: 9.5px;
+    }
+
+    /* Projects */
+    .project-item {
+      margin-bottom: 10px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .project-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #4aae9b;
+    }
+    .project-name {
+      color: #4aae9b;
+      font-weight: 700;
+      font-size: 11px;
+    }
+    .project-name a {
+      color: #4aae9b;
+      text-decoration: none;
+    }
+    .project-name a:hover { text-decoration: underline; }
+    .project-desc {
+      color: #555;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+    .project-link {
+      color: #888;
+      font-size: 9.5px;
+    }
+    .project-link a {
+      color: #4aae9b;
+      text-decoration: none;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="section" style="text-align:center;">
+        <img class="profile-photo" src="avatar.jpg" alt="Mehmet Arif Emre Şen">
+      </div>
+
+      <div class="section">
+        <div class="contact-item">
+          <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+          <a href="mailto:maemresen@yazilim.vip">maemresen@yazilim.vip</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon"><i class="fa-solid fa-globe"></i></span>
+          <a href="https://maemresen.com">https://maemresen.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon"><i class="fa-brands fa-github"></i></span>
+          <a href="https://github.com/maemresen">maemresen</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
+          <a href="https://www.linkedin.com/in/maemresen/">in/maemresen</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon"><i class="fa-brands fa-x-twitter"></i></span>
+          <a href="https://twitter.com/maemresen">@maemresen</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+          <span>Tallinn, Estonia</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>About Me</h2>
+        <p class="about-text">
+          Software Engineer with 8+ years of experience building scalable backend systems with Java and Spring Boot. Proven track record across enterprise logistics, fintech, government, and IoT domains. Experienced in designing microservices architectures, CI/CD pipelines, and event-driven systems from scratch.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Technical Skills</h2>
+        <div class="skill-category">
+          <div class="skill-category-items"><strong>Backend:</strong> Java, Spring Boot, Spring Data, Hibernate</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-items"><strong>RDBMS:</strong> MySQL, PostgreSQL</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-items"><strong>NoSQL:</strong> Cassandra, Elasticsearch</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-items"><strong>Security:</strong> OAuth 2.0, Keycloak, SAML, JWT</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-items"><strong>Messaging:</strong> Kafka, RabbitMQ</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-items"><strong>Build Tools:</strong> Maven, Gradle</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-items"><strong>CI/CD:</strong> Jenkins, Kubernetes, OpenShift, ArgoCD, GitLab CI/CD</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-items"><strong>DevOps &amp; Cloud:</strong> Docker, Terraform, Crossplane, AWS</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-items"><strong>Frontend:</strong> React, Angular</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-items"><strong>Other:</strong> Apache NiFi, GraphQL, MCP</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Language</h2>
+        <div class="lang-item">
+          <div class="lang-name">Turkish: <span style="font-weight:400; color:#666;">Native</span></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-name">English: <span style="font-weight:400; color:#666;">Professional</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Publications</h2>
+        <div style="font-size:8px; color:#555; margin-bottom:4px; line-height:1.35;">
+          <strong>Design and Implementation of a General User Authentication System Using RESTful Web Services, Node.js, Raspberry Pi, and RFID Technology.</strong><br>
+          M. Karako&ccedil;, C. Ard&#305;&ccedil;, M. A. E. &#350;en &middot; 2021
+        </div>
+        <div style="font-size:8px; color:#555; margin-bottom:4px; line-height:1.35;">
+          <strong>Design and Implementation of a General User Authentication System Using RESTful Web Services, Android, Arduino Microcontroller, and RFID Technology.</strong><br>
+          C. Ard&#305;&ccedil;, M. A. E. &#350;en, M. Karako&ccedil; &middot; 2018
+        </div>
+        <div style="font-size:8px; color:#555; margin-bottom:4px; line-height:1.35;">
+          <strong>Outcome Focused Computer Based Assessment System using Intelligent Shuffling Algorithm.</strong><br>
+          M. Karako&ccedil;, A. Aksoy, M. A. E. Sen, G&uuml;nay &middot; ICES 2017
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="main">
+      <div class="name-header">
+        <h1>Mehmet Arif <span class="accent">Emre &#350;en</span></h1>
+        <div class="subtitle">Software Engineer</div>
+      </div>
+
+      <div class="section">
+        <div class="section-heading">
+          <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
+          <h2>Work Experience</h2>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Software Engineer (Hybrid)</span>
+            <span class="job-date">MAY 2023 - Present (3 years)</span>
+          </div>
+          <div class="job-company">Kuehne+Nagel, Tallinn, Estonia</div>
+
+          <div class="job-project-item">
+            <div class="job-project-name">Document Output Solutions</div>
+            <div class="job-desc">
+              Building end-to-end document processing system handling millions of documents for physical print, PDF email distribution, and archiving. Developing Java-based data flows using Apache NiFi and Spring Boot in a small, high-ownership team of 3 developers. Leading migration from on-prem OpenShift to AWS as part of company-wide modernization. First team to onboard the new internal developer platform (IDP) built with Crossplane and Terraform, providing early feedback to the platform team. Integrating AI coding agents (Kiro) into the development workflow.
+            </div>
+          </div>
+
+          <div class="job-project-item">
+            <div class="job-project-name">Operational Data Store Service</div>
+            <div class="job-desc">
+              Built a data pipeline service that captured changes from Oracle OTM via CDC (StreamSets), enriched, deduplicated, and published shipment data to Kafka for downstream consumer applications enabling customers to track and manage their shipments in real time. Developed a multi-module Spring Boot system (event listener, processor, publisher) with PostgreSQL, and owned the full CI/CD lifecycle using Jenkins, ArgoCD, and Gradle.
+            </div>
+          </div>
+
+          <div class="job-project-item">
+            <div class="job-project-name">Inventory</div>
+            <div class="job-desc">
+              Full-stack inventory tracking application using Spring Boot and Angular. Led the containerization effort migrating from VMs to OpenShift/Kubernetes, set up Jenkins CI/CD pipelines on OpenShift, enabled SSO authentication using SAML, and integrated Kafka for asynchronous data consumption.
+            </div>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Software Engineer (Remote)</span>
+            <span class="job-date">MAR 2021 - MAR 2023 (2 years)</span>
+          </div>
+          <div class="job-company">OBSS Technology, Antalya, T&uuml;rkiye</div>
+
+          <div class="job-project-item">
+            <div class="job-project-name">Witwiser (<a href="https://witwiser.io">https://witwiser.io</a>)</div>
+            <div class="job-desc">
+              Full-stack developer on a SaaS online assessment and remote proctoring platform used by major universities (ITU, Ankara University), enterprises (L'Or&eacute;al, LC Waikiki), and government institutions. Built assessment features end-to-end from React UI to Spring Boot GraphQL APIs. Supported Node.js backend and proctoring services. Worked in a small startup-style team of 4-5 developers within OBSS. Tech stack included Liquibase, MySQL, Kafka, and AWS (SES, SNS, SQS).
+            </div>
+          </div>
+
+          <div class="job-project-item">
+            <div class="job-project-name">Istanbul Finance Center Portal (<a href="https://www.ifm.gov.tr">https://www.ifm.gov.tr</a>)</div>
+            <div class="job-desc">
+              Core backend developer from day zero to delivery on a turnkey government project for Turkey's Istanbul Financial Center — a global finance hub serving investors and fintech companies. Designed and built the full backend using Spring Boot RESTful APIs for a React client, implemented JWT authentication, managed MySQL with Flyway migrations, and handled async messaging with RabbitMQ. Set up monitoring with Sentry and Kibana.
+            </div>
+          </div>
+
+          <div class="job-project-item">
+            <div class="job-project-name">OBSS Turnkey Project: Fintechub Portal</div>
+            <div class="job-desc">
+              Full-stack developer from day zero on a fintech portal for the Presidency of the Republic of Turkey Finance Office, connecting investors with startups. Helped design the architecture, built Spring Boot RESTful APIs and React components, implemented Keycloak authentication, integrated Elasticsearch for advanced search, and set up RabbitMQ messaging. Managed MySQL databases with Sentry and Kibana for monitoring.
+            </div>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">R &amp; D Software Engineer</span>
+            <span class="job-date">JUL 2018 - AUG 2020 (2 years)</span>
+          </div>
+          <div class="job-company">Cantekgroup, Antalya, T&uuml;rkiye</div>
+          <div class="job-desc" style="padding-left: 18px;">
+            Redesigned a legacy on-prem system into a modern Spring Boot microservices platform from scratch for a TUBITAK-funded R&amp;D project, in a small team. The system provided Industrial Control (ICS) and Early Warning (EWS) for Cantek's cold storage warehouses and Farminova's vertical plant factories — enabling real-time monitoring of temperature, humidity, and atmospheric conditions to prevent costly product loss. Designed the full architecture from scratch: Keycloak (OAuth 2.0) for authentication, Eureka for service discovery, Zuul Gateway for API routing, RabbitMQ for IoT device communication, PostgreSQL and Cassandra for storage, and Jenkins with JFrog Artifactory for CI/CD.
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Software Developer (Part-Time)</span>
+            <span class="job-date">AUG 2016 - JUL 2018 (2 years)</span>
+          </div>
+          <div class="job-company">Akdeniz University IT, Antalya, T&uuml;rkiye</div>
+          <div class="job-desc" style="padding-left: 18px;">
+            Developed Java web apps using Spring MVC, enabling database communication via RESTful services. Compiled and deployed apps using Maven, SVN, Jenkins, and Tomcat. Designed UI components with HTML, CSS, and jQuery for a computer-based assessment system.
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-heading">
+          <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <h2>Education</h2>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-header">
+            <span class="edu-title">Computer Science Engineering - Bachelor's Degree</span>
+            <span class="edu-date">2015 - 2019</span>
+          </div>
+          <div class="edu-meta">Akdeniz University, Antalya, T&uuml;rkiye</div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
