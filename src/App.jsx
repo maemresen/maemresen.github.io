@@ -1,12 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'react-bootstrap/Image';
 import { Col, Container, Row } from 'react-bootstrap';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faChampagneGlasses,
+  faDownload,
   faEnvelope,
-  faFile,
+  faCode,
+  faUsers,
+  faRobot,
 } from '@fortawesome/free-solid-svg-icons';
 import { COLORS } from './utils/styles';
 
@@ -17,181 +19,242 @@ import {
   faGitlab,
   faLinkedin,
   faMedium,
+  faJava,
+  faJs,
+  faReact,
+  faDocker,
+  faAws,
+  faGitAlt,
+  faPython,
+  faLinux,
 } from '@fortawesome/free-brands-svg-icons';
 
-const TitleContainer = styled.div`
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+const glowPulse = keyframes`
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 204, 102, 0.15); }
+  50% { box-shadow: 0 0 25px rgba(0, 204, 102, 0.25); }
 `;
 
-const Title = styled.h1`
+const MainCard = styled.div`
+  max-width: 720px;
+  width: 100%;
+  border: 1px solid ${COLORS.BORDER};
+  border-radius: 16px;
+  background: ${COLORS.BG_CARD};
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  animation: ${glowPulse} 4s ease-in-out infinite;
+`;
+
+const ProfileImage = styled(Image)`
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid ${COLORS.PRIMARY_DIM};
+`;
+
+const Name = styled.h1`
   color: ${COLORS.PRIMARY};
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
 `;
 
-const SubTitle = styled.h3`
+const Handle = styled.p`
+  color: ${COLORS.SECONDARY_DARK};
+  font-size: 1rem;
+  margin-bottom: 1rem;
+`;
+
+const Bio = styled.p`
   color: ${COLORS.SECONDARY};
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
 `;
 
-const References = styled.div`
-  color: ${COLORS.SECONDARY};
-  
-  display: flex;
-`;
-
-const Section = styled.div`
-  color: ${({ $primary }) => ($primary ? COLORS.PRIMARY : COLORS.SECONDARY)};
-  text-align: justify;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const MaeLink = styled.a`
-  color: ${COLORS.SECONDARY};
+const SocialLink = styled.a`
+  color: ${COLORS.SECONDARY_DARK};
+  transition: color 0.2s, transform 0.2s;
 
   &:hover {
-    cursor: pointer;
-    color: ${COLORS.SECONDARY_DARK} !important;
+    color: ${COLORS.PRIMARY};
+    transform: translateY(-2px);
   }
 `;
 
-const CvContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+const Divider = styled.hr`
+  border-color: ${COLORS.BORDER};
+  margin: 1.5rem 0;
 `;
 
-const ImageContainer = styled.div`
+const SectionTitle = styled.h5`
+  color: ${COLORS.PRIMARY};
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
   display: flex;
-  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+const SkillBadge = styled.span`
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: ${COLORS.SECONDARY};
+  background: ${COLORS.BG_BADGE};
+  border: 1px solid ${COLORS.BORDER};
+`;
+
+const ActionButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid ${COLORS.BORDER};
+  color: ${COLORS.SECONDARY};
+  background: transparent;
+
+  &:hover {
+    background: ${COLORS.BG_BADGE};
+    color: ${COLORS.PRIMARY};
+    border-color: ${COLORS.PRIMARY_DIM};
+  }
+`;
+
+const PrimaryButton = styled(ActionButton)`
+  background: ${COLORS.PRIMARY_DIM};
+  border-color: ${COLORS.PRIMARY_DIM};
+  color: #fff;
+
+  &:hover {
+    background: ${COLORS.PRIMARY};
+    border-color: ${COLORS.PRIMARY};
+    color: #fff;
+  }
+`;
+
+const Footer = styled.p`
+  color: ${COLORS.SECONDARY_DARK};
+  font-size: 0.75rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 6px;
 `;
 
-const MainContainer = styled.div`
-  border: 3px solid ${COLORS.PRIMARY};
-  background-color: rgba(0,0,0,.3)
-`;
+const SKILLS = [
+  { icon: faJava, label: 'Java' },
+  { icon: faJs, label: 'JavaScript' },
+  { icon: faReact, label: 'React' },
+  { icon: faPython, label: 'Python' },
+  { icon: faDocker, label: 'Docker' },
+  { icon: faAws, label: 'AWS' },
+  { icon: faGitAlt, label: 'Git' },
+  { icon: faLinux, label: 'Linux' },
+];
 
-const ReferenceLink = styled(MaeLink)`
-  &:hover{
-    color: ${COLORS.PRIMARY} !important;
-  }
-`;
+const SOCIALS = [
+  { icon: faGitlab, href: 'https://gitlab.com/emresen' },
+  { icon: faGithub, href: 'https://github.com/maemresen' },
+  { icon: faMedium, href: 'https://medium.com/@maemresen' },
+  { icon: faLinkedin, href: 'https://www.linkedin.com/in/maemresen/' },
+  { icon: faEnvelope, href: 'mailto:maemresen@yazilim.vip' },
+];
 
 const App = () => (
-  <Col xs={{ span: 12 }} md={{ span: 10, offset: 1 }} xl={{ span: 8, offset: 2 }}>
-    <MainContainer className="p-4">
-      <Container>
-        <Row>
-          <Col md={2} xxl={3}>
-            <ImageContainer>
-              <Image
-                className="d-none d-lg-block"
-                width="130"
-                rounded
-                src="https://avatars2.githubusercontent.com/u/17517090?s=460&u=a0e442b6913f827d2e51e00abe143b2dbc375f33&v=4"
-              />
-            </ImageContainer>
-          </Col>
-          <Col md={8} xxl={6}>
-            <TitleContainer>
-              <Title>Mehmet Arif Emre Şen</Title>
-              <SubTitle>(a.k.a maemresen)</SubTitle>
-              <References>
-                <ReferenceLink
-                  target="_blank"
-                  href="https://gitlab.com/emresen"
-                >
-                  <FontAwesomeIcon icon={faGitlab} className="mx-3 mt-2" size="2x" />
-                </ReferenceLink>
-                <ReferenceLink
-                  target="_blank"
-                  href="https://github.com/maemresen"
-                >
-                  <FontAwesomeIcon icon={faGithub} className="mx-3 mt-2" size="2x" />
-                </ReferenceLink>
-                <ReferenceLink
-                  target="_blank"
-                  href="https://medium.com/@maemresen"
-                >
-                  <FontAwesomeIcon icon={faMedium} className="mx-3 mt-2" size="2x" />
-                </ReferenceLink>
-                <ReferenceLink
-                  target="_blank"
-                  href="https://www.linkedin.com/in/maemresen/"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} className="mx-3 mt-2" size="2x" />
-                </ReferenceLink>
-                <ReferenceLink
-                  target="_blank"
-                  href="mailto:maemresen@yazilim.vip"
-                >
-                  <FontAwesomeIcon icon={faEnvelope} className="mx-3 mt-2" size="2x" />
-                </ReferenceLink>
-              </References>
-            </TitleContainer>
-          </Col>
-          <Col md={2} xxl={3}>
-            <ImageContainer>
-              <Image
-                className="d-none d-lg-block"
-                width="130"
-                rounded
-                src={profilePic}
-              />
-            </ImageContainer>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={{ span: 8, offset: 2 }} xxl={{ span: 6, offset: 3 }}>
-            <Section className="mt-4">
-              I&apos;m a tech-driven software engineer aiming to simplify tasks using innovative technologies.
-              My life goal is having my own job and creating a software community that everyone can get benefit from. 
-              I have deep interest to Object Oriented Paradigm.
-            </Section>
-            <Section className="mt-4" $primary>
-              <h5>
-                <FontAwesomeIcon icon={faFile} />
-                <span className="mx-3">
-                      <MaeLink
-                        target="_blank"
-                        href="https://drive.google.com/file/d/1YW1Tekf5oTMoqJIt1J-eKq8mGEkMV811/view?usp=drive_link"
-                      >
-                        Check My Cv here
-                      </MaeLink>
-                </span>
-                <FontAwesomeIcon icon={faFile} />
-              </h5>
-            </Section>
-            <Section className="mt-4">
-              We have a software community named as YazilimVIP. Feel free to visit
-              our website by the following link
-            </Section>
-            <Section className="mt-4">
-              <CvContainer>
-                <h5>
-                  <FontAwesomeIcon icon={faChampagneGlasses} />
-                  <MaeLink
-                    className="mx-3"
-                    target="_blank"
-                    href="https://www.yazilim.vip"
-                  >
-                    www.yazilim.vip
-                  </MaeLink>
-                  <FontAwesomeIcon icon={faChampagneGlasses} />
-                </h5>
-              </CvContainer>
-            </Section>
-          </Col>
-        </Row>
-      </Container>
-    </MainContainer>
-  </Col>
+  <MainCard>
+    <Container fluid>
+      {/* Header */}
+      <Row className="justify-content-center text-center">
+        <Col xs={12} className="d-flex flex-column align-items-center">
+          <ProfileImage src={profilePic} roundedCircle />
+          <Name className="mt-3">Mehmet Arif Emre Sen</Name>
+          <Handle>@maemresen</Handle>
+          <div className="d-flex gap-3 mb-3">
+            {SOCIALS.map((s) => (
+              <SocialLink key={s.href} href={s.href} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={s.icon} size="lg" />
+              </SocialLink>
+            ))}
+          </div>
+          <Bio>
+            Software engineer focused on building clean, scalable systems.
+            Passionate about open source and knowledge sharing through
+            the YazilimVIP community.
+          </Bio>
+        </Col>
+      </Row>
+
+      <Divider />
+
+      {/* Skills */}
+      <Row className="justify-content-center text-center">
+        <Col xs={12}>
+          <SectionTitle className="justify-content-center">
+            <FontAwesomeIcon icon={faCode} />
+            Tech Stack
+          </SectionTitle>
+          <div className="d-flex flex-wrap gap-2 justify-content-center">
+            {SKILLS.map((s) => (
+              <SkillBadge key={s.label}>
+                <FontAwesomeIcon icon={s.icon} />
+                {s.label}
+              </SkillBadge>
+            ))}
+          </div>
+        </Col>
+      </Row>
+
+      <Divider />
+
+      {/* Actions */}
+      <Row className="justify-content-center text-center">
+        <Col xs={12}>
+          <div className="d-flex flex-wrap gap-3 justify-content-center">
+            <PrimaryButton
+              href="https://drive.google.com/file/d/1YW1Tekf5oTMoqJIt1J-eKq8mGEkMV811/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faDownload} />
+              Download CV
+            </PrimaryButton>
+            <ActionButton
+              href="https://www.yazilim.vip"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faUsers} />
+              YazilimVIP Community
+            </ActionButton>
+          </div>
+        </Col>
+      </Row>
+      {/* Footer */}
+      <Divider />
+      <Row className="justify-content-center text-center">
+        <Col xs={12}>
+          <Footer>
+            <FontAwesomeIcon icon={faRobot} />
+            {' Built with Claude Code'}
+          </Footer>
+        </Col>
+      </Row>
+    </Container>
+  </MainCard>
 );
 
 export default App;

@@ -3,19 +3,20 @@ html {
 }
 
 body {
-  background-image: url('./assets/images/mustang_old_black.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #0a0a0a;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(0, 204, 102, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(0, 204, 102, 0.03) 0%, transparent 50%);
   display: flex;
   min-height: 100vh;
+  margin: 0;
 }
 
 #root {
   width: 100%;
   min-height: 100%;
-  background-color: rgba(0,0,0,.75);
-
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
